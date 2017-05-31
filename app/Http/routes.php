@@ -11,8 +11,30 @@
 |
 */
 
-Route::get('/welcome', function () {
-//    return view('welcome');
+//Route::get('/welcome', function () {
+////    return view('welcome');
+//
+//    return 'hi how are you?';
+//
+//
+//});
 
-    return 'hi how are you';
-});
+
+//Route::get('/posts/{id}/{name}', function ($id,$name) {
+//
+//
+//  return 'this is post no ' .$id .' ' .$name;
+//
+//
+//});
+
+
+//Route::get('/post/{id}','PostsController@index');
+
+//Route::resource('posts','PostsController');
+
+Route::get('/contact', 'PostsController@contact');
+
+Route::get('/post/{id}/{name}/{password}', 'PostsController@show_post');
+
+
