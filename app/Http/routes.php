@@ -1,4 +1,5 @@
 <?php
+use App\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,11 +46,11 @@
 
 */
 
-//Route::get('/insert', function (){
-//
-//    DB::insert('insert into posts (title, content) values (?, ?)', ['php with laravel 5.2', 'laravel is best php framework']);
-//
-//});
+Route::get('/insert', function (){
+
+    DB::insert('insert into posts (title, content) values (?, ?)', ['laravel just wow', 'laravel yammy ']);
+
+});
 
 
 //Route::get('/read', function (){
@@ -76,9 +77,92 @@
 //});
 
 
-Route::get('delete', function (){
+//Route::get('delete', function (){
+//
+//    $deleted = DB::delete('delete from posts where id =?', [1]);
+//
+//    return $deleted;
+//});
 
-    $deleted = DB::delete('delete from posts where id =?', [1]);
 
-    return $deleted;
+
+/*
+|--------------------------------------------------------------------------
+| eloquent
+|--------------------------------------------------------------------------
+
+*/
+
+
+
+
+//Route::get('/read', function (){
+//
+//$posts = Post::all();
+//
+//foreach ($posts as $post){
+//
+//
+//    return $post->title;
+//}
+//
+//
+//});
+
+
+
+//Route::get('/id', function (){
+//
+//    $post = Post::find(2);
+//
+//    return $post->title;
+//
+//
+//
+//});
+
+
+//Route::get('findwhere', function (){
+//
+//   $posts = Post::where('id', 3)->orderBy('id','desc')->take(1)->get();
+//
+//   return $posts;
+//});
+
+
+//Route::get('/findmore',function (){
+//
+//
+////   $posts = Post::findOrFail(2);
+////
+////   return $posts;
+//
+//    $posts = Post::where('users_count', '<', 50)->firstOrFail();
+//
+//});
+
+
+
+//Route::get('basicinsert', function (){
+//
+//   $post = new Post;
+//   $post->title = 'new title inserted';
+//   $post->content = 'new content inserted';
+//
+//
+//   $post->save();
+//
+//});
+
+
+
+Route::get('basicinsert5', function (){
+
+    $post = Post::find(5);
+    $post->title = 'new title inserted via 5';
+    $post->content = 'new content inserted via 5';
+
+
+    $post->save();
+
 });
