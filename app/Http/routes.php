@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//
+//});
 
 
 //Route::get('/posts/{id}/{name}', function ($id,$name) {
@@ -30,8 +30,19 @@ Route::get('/', function () {
 
 //Route::resource('posts','PostsController');
 
-Route::get('/contact', 'PostsController@contact');
 
-Route::get('/post/{id}/{name}/{password}', 'PostsController@show_post');
 
+
+//Route::get('/contact', 'PostsController@contact');
+//
+//Route::get('/post/{id}/{name}/{password}', 'PostsController@show_post');
+
+
+
+
+Route::get('/insert', function (){
+
+    DB::insert('insert into posts (title, content) values (?, ?)', ['php with laravel 5.2', 'laravel is best php framework']);
+
+});
 
