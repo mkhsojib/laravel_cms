@@ -52,17 +52,25 @@
 //});
 
 
-Route::get('/read', function (){
-
-   $results =  DB::select('select * from posts where id = ?', [1]);
-
-   return var_dump($results) ;
-
-//   foreach ($results as $post){
+//Route::get('/read', function (){
 //
-//       return $post->title;
+//   $results =  DB::select('select * from posts where id = ?', [1]);
 //
-//   }
+//   return var_dump($results) ;
+//
+////   foreach ($results as $post){
+////
+////       return $post->title;
+////
+////   }
+//
+//});
+
+
+Route::get('update', function (){
+
+    $updated = DB::update('update posts set title ="title updated" where id=?', [1]);
+
+    return $updated;
 
 });
-
