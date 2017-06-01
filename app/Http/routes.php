@@ -32,8 +32,6 @@ use App\Post;
 //Route::resource('posts','PostsController');
 
 
-
-
 //Route::get('/contact', 'PostsController@contact');
 //
 //Route::get('/post/{id}/{name}/{password}', 'PostsController@show_post');
@@ -46,7 +44,7 @@ use App\Post;
 
 */
 
-Route::get('/insert', function (){
+Route::get('/insert', function () {
 
     DB::insert('insert into posts (title, content) values (?, ?)', ['laravel just wow', 'laravel yammy ']);
 
@@ -85,15 +83,12 @@ Route::get('/insert', function (){
 //});
 
 
-
 /*
 |--------------------------------------------------------------------------
 | eloquent
 |--------------------------------------------------------------------------
 
 */
-
-
 
 
 //Route::get('/read', function (){
@@ -108,7 +103,6 @@ Route::get('/insert', function (){
 //
 //
 //});
-
 
 
 //Route::get('/id', function (){
@@ -142,8 +136,7 @@ Route::get('/insert', function (){
 //});
 
 
-
-//Route::get('basicinsert', function (){
+//Route::get('/basicinsert', function (){
 //
 //   $post = new Post;
 //   $post->title = 'new title inserted';
@@ -155,14 +148,46 @@ Route::get('/insert', function (){
 //});
 
 
+//Route::get('/basicinsert5', function (){
+//
+//    $post = Post::find(5);
+//    $post->title = 'new title inserted via 5';
+//    $post->content = 'new content inserted via 5';
+//
+//
+//    $post->save();
+//
+//});
 
-Route::get('basicinsert5', function (){
 
-    $post = Post::find(5);
-    $post->title = 'new title inserted via 5';
-    $post->content = 'new content inserted via 5';
+//Route::get('/create', function () {
+//
+//    Post::create(['title' => 'this is new title', 'content' => 'this is new content']);
+//
+//});
 
 
-    $post->save();
+//Route::get('/update', function () {
+//
+//Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'sojib','content'=>'kamrul hasan sojib']);
+//});
+
+
+//Route::get('/delete', function (){
+//
+//   $post = Post::find(2);
+//
+//   $post->delete();
+//
+//});
+
+
+Route::get('/delete3',function (){
+
+    Post::destroy([5,6]);
+
+
+//    Post::where('is_admin',0)->delete();
 
 });
+
