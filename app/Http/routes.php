@@ -11,13 +11,10 @@
 |
 */
 
-//Route::get('/welcome', function () {
-////    return view('welcome');
-//
-//    return 'hi how are you?';
-//
-//
-//});
+Route::get('/', function () {
+    return view('welcome');
+
+});
 
 
 //Route::get('/posts/{id}/{name}', function ($id,$name) {
