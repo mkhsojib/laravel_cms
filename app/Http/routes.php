@@ -1,5 +1,6 @@
 <?php
 use App\Post;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -136,16 +137,16 @@ Route::get('/insert', function () {
 //});
 
 
-Route::get('/basicinsert', function () {
-
-    $post = new Post;
-    $post->title = 'new title inserted';
-    $post->content = 'new content inserted';
-
-
-    $post->save();
-
-});
+//Route::get('/basicinsert', function () {
+//
+//    $post = new Post;
+//    $post->title = 'new title inserted';
+//    $post->content = 'new content inserted';
+//
+//
+//    $post->save();
+//
+//});
 
 
 //Route::get('/basicinsert5', function (){
@@ -173,13 +174,13 @@ Route::get('/basicinsert', function () {
 //});
 
 
-Route::get('/delete', function (){
-
-   $post = Post::find(4);
-
-   $post->delete();
-
-});
+//Route::get('/delete', function (){
+//
+//   $post = Post::find(4);
+//
+//   $post->delete();
+//
+//});
 
 //
 //Route::get('/delete3',function (){
@@ -223,8 +224,23 @@ Route::get('/delete', function (){
 //});
 
 
-Route::get('/forcedelete', function () {
+//Route::get('/forcedelete', function () {
+//
+//    Post::onlyTrashed('is_admin', 0)->forceDelete();
+//
+//});
 
-    Post::onlyTrashed('is_admin', 0)->forceDelete();
+/*
+|--------------------------------------------------------------------------
+| eloquent relationship
+|--------------------------------------------------------------------------
+
+*/
+
+// one to one relationship
+
+Route::get('/user/{id}/post', function ($id){
+
+   return User::find($id)->post;
 
 });
