@@ -191,7 +191,7 @@ Route::get('/create', function () {
 //
 //});
 
-
+//
 //Route::get('/softdelete', function () {
 //
 //    Post::find(2)->delete();
@@ -199,17 +199,25 @@ Route::get('/create', function () {
 //});
 
 
-Route::get('/readsoftdelete', function () {
-
-//    $post = Post::find(1);
+//Route::get('/readsoftdelete', function () {
 //
+////    $post = Post::find(1);
+////
+////    return $post;
+//
+////    $post = Post::withTrashed('is_admin', 0)->get();
+////    return $post;
+//
+//
+//    $post = Post::onlyTrashed()->where('is_admin', 0)->get();
 //    return $post;
+//
+//});
 
-//    $post = Post::withTrashed('is_admin', 0)->get();
-//    return $post;
 
-
-    $post = Post::onlyTrashed()->where('is_admin', 0)->get();
-    return $post;
-
-});
+//Route::get('/restore', function (){
+//
+//
+//   Post::withTrashed('is_admin',0)->restore();
+//
+//});
