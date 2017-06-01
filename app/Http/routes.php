@@ -159,12 +159,12 @@ Route::get('/basicinsert', function () {
 //
 //});
 
-
-Route::get('/create', function () {
-
-    Post::create(['title' => 'this is new title3', 'content' => 'this is new content3']);
-
-});
+//
+//Route::get('/create', function () {
+//
+//    Post::create(['title' => 'this is new title6', 'content' => 'this is new content6']);
+//
+//});
 
 
 //Route::get('/update', function () {
@@ -173,13 +173,13 @@ Route::get('/create', function () {
 //});
 
 
-//Route::get('/delete', function (){
-//
-//   $post = Post::find(2);
-//
-//   $post->delete();
-//
-//});
+Route::get('/delete', function (){
+
+   $post = Post::find(4);
+
+   $post->delete();
+
+});
 
 //
 //Route::get('/delete3',function (){
@@ -221,3 +221,10 @@ Route::get('/create', function () {
 //   Post::withTrashed('is_admin',0)->restore();
 //
 //});
+
+
+Route::get('/forcedelete', function () {
+
+    Post::onlyTrashed('is_admin', 0)->forceDelete();
+
+});
