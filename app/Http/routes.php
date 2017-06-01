@@ -38,11 +38,31 @@
 //Route::get('/post/{id}/{name}/{password}', 'PostsController@show_post');
 
 
+/*
+|--------------------------------------------------------------------------
+| database raw sql queries
+|--------------------------------------------------------------------------
+
+*/
+
+//Route::get('/insert', function (){
+//
+//    DB::insert('insert into posts (title, content) values (?, ?)', ['php with laravel 5.2', 'laravel is best php framework']);
+//
+//});
 
 
-Route::get('/insert', function (){
+Route::get('/read', function (){
 
-    DB::insert('insert into posts (title, content) values (?, ?)', ['php with laravel 5.2', 'laravel is best php framework']);
+   $results =  DB::select('select * from posts where id = ?', [1]);
+
+   return var_dump($results) ;
+
+//   foreach ($results as $post){
+//
+//       return $post->title;
+//
+//   }
 
 });
 
