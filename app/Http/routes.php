@@ -136,16 +136,16 @@ Route::get('/insert', function () {
 //});
 
 
-//Route::get('/basicinsert', function (){
-//
-//   $post = new Post;
-//   $post->title = 'new title inserted';
-//   $post->content = 'new content inserted';
-//
-//
-//   $post->save();
-//
-//});
+Route::get('/basicinsert', function () {
+
+    $post = new Post;
+    $post->title = 'new title inserted';
+    $post->content = 'new content inserted';
+
+
+    $post->save();
+
+});
 
 
 //Route::get('/basicinsert5', function (){
@@ -162,7 +162,7 @@ Route::get('/insert', function () {
 
 Route::get('/create', function () {
 
-    Post::create(['title' => 'this is new title', 'content' => 'this is new content']);
+    Post::create(['title' => 'this is new title3', 'content' => 'this is new content3']);
 
 });
 
@@ -192,8 +192,24 @@ Route::get('/create', function () {
 //});
 
 
-Route::get('/softdelete', function (){
+//Route::get('/softdelete', function () {
+//
+//    Post::find(2)->delete();
+//
+//});
 
-Post::find(1)->delete();
+
+Route::get('/readsoftdelete', function () {
+
+//    $post = Post::find(1);
+//
+//    return $post;
+
+//    $post = Post::withTrashed('is_admin', 0)->get();
+//    return $post;
+
+
+    $post = Post::onlyTrashed()->where('is_admin', 0)->get();
+    return $post;
 
 });

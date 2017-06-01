@@ -4,7 +4,6 @@
     <list default="true" id="893e81db-659e-43da-b5ed-c294b2fdfbf5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Post.php" afterPath="$PROJECT_DIR$/app/Post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,16 +33,16 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="196" column="24" lean-forward="false" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
+            <state relative-caret-position="343">
+              <caret line="214" column="3" lean-forward="true" selection-start-line="214" selection-start-column="3" selection-end-line="214" selection-end-column="3" />
               <folding>
-                <marker date="1496310642000" expanded="true" signature="1081:1129" ph="insert into posts... " />
-                <marker date="1496310642000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
-                <marker date="1496310642000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
-                <marker date="1496310642000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
-                <marker date="1496310642000" expanded="true" signature="1493:1507" ph="update posts... " />
-                <marker date="1496310642000" expanded="true" signature="1493:1543" ph="update posts... " />
-                <marker date="1496310642000" expanded="true" signature="1657:1686" ph="delete from " />
+                <marker date="1496315463000" expanded="true" signature="1081:1129" ph="insert into posts... " />
+                <marker date="1496315463000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
+                <marker date="1496315463000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
+                <marker date="1496315463000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
+                <marker date="1496315463000" expanded="true" signature="1493:1507" ph="update posts... " />
+                <marker date="1496315463000" expanded="true" signature="1493:1543" ph="update posts... " />
+                <marker date="1496315463000" expanded="true" signature="1657:1686" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -433,12 +432,12 @@
       <updated>1496149948135</updated>
       <workItem from="1496149951423" duration="32000" />
       <workItem from="1496151130597" duration="16287000" />
-      <workItem from="1496308648988" duration="1447000" />
+      <workItem from="1496308648988" duration="3032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17766000" />
+    <option name="totallyTimeSpent" value="19351000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,13 +490,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1496310642000" expanded="true" signature="1081:1129" ph="insert into posts... " />
-            <marker date="1496310642000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1493:1507" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1493:1543" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1657:1686" ph="delete from " />
+            <marker date="1496315463000" expanded="true" signature="1081:1129" ph="insert into posts... " />
+            <marker date="1496315463000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1493:1507" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1493:1543" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1657:1686" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -517,13 +516,13 @@
         <state relative-caret-position="105">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1496310642000" expanded="true" signature="1081:1129" ph="insert into posts... " />
-            <marker date="1496310642000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1493:1507" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1493:1543" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1657:1686" ph="delete from " />
+            <marker date="1496315463000" expanded="true" signature="1081:1129" ph="insert into posts... " />
+            <marker date="1496315463000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1493:1507" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1493:1543" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1657:1686" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -666,16 +665,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="196" column="24" lean-forward="false" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
+        <state relative-caret-position="343">
+          <caret line="214" column="3" lean-forward="true" selection-start-line="214" selection-start-column="3" selection-end-line="214" selection-end-column="3" />
           <folding>
-            <marker date="1496310642000" expanded="true" signature="1081:1129" ph="insert into posts... " />
-            <marker date="1496310642000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
-            <marker date="1496310642000" expanded="true" signature="1493:1507" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1493:1543" ph="update posts... " />
-            <marker date="1496310642000" expanded="true" signature="1657:1686" ph="delete from " />
+            <marker date="1496315463000" expanded="true" signature="1081:1129" ph="insert into posts... " />
+            <marker date="1496315463000" expanded="true" signature="1247:1271" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1279" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1247:1421" ph="select * fro... posts" />
+            <marker date="1496315463000" expanded="true" signature="1493:1507" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1493:1543" ph="update posts... " />
+            <marker date="1496315463000" expanded="true" signature="1657:1686" ph="delete from " />
           </folding>
         </state>
       </provider>
