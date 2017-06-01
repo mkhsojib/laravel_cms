@@ -239,17 +239,34 @@ Route::get('/insert', function () {
 
 // one to one relationship
 
-Route::get('/user/{id}/post', function ($id){
-
-   return User::find($id)->post;
-
-});
+//Route::get('/user/{id}/post', function ($id){
+//
+//   return User::find($id)->post;
+//
+//});
 
 
 // inverse relation
 
-Route::get('/post/{id}/user', function ($id){
+//Route::get('/post/{id}/user', function ($id){
+//
+//    return Post::find($id)->user->name;
+//
+//});
 
-    return Post::find($id)->user->name;
+
+// One to many relationship
+
+Route::get('/posts', function () {
+
+
+
+    $user = User::find(1);
+    foreach ($user->posts as $post){
+
+        echo $post->title . '<br>';
+
+
+    }
 
 });
