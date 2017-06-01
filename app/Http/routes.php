@@ -160,11 +160,11 @@ Route::get('/insert', function () {
 //});
 
 
-//Route::get('/create', function () {
-//
-//    Post::create(['title' => 'this is new title', 'content' => 'this is new content']);
-//
-//});
+Route::get('/create', function () {
+
+    Post::create(['title' => 'this is new title', 'content' => 'this is new content']);
+
+});
 
 
 //Route::get('/update', function () {
@@ -181,13 +181,19 @@ Route::get('/insert', function () {
 //
 //});
 
+//
+//Route::get('/delete3',function (){
+//
+//    Post::destroy([5,6]);
+//
+//
+////    Post::where('is_admin',0)->delete();
+//
+//});
 
-Route::get('/delete3',function (){
 
-    Post::destroy([5,6]);
+Route::get('/softdelete', function (){
 
-
-//    Post::where('is_admin',0)->delete();
+Post::find(1)->delete();
 
 });
-
