@@ -1,5 +1,6 @@
 <?php
 use App\Country;
+use App\Photo;
 use App\Post;
 use App\User;
 
@@ -319,26 +320,35 @@ Route::get('/insert', function () {
 
 // Polymorphic relation
 
-Route::get('user/photos', function (){
+//Route::get('user/photos', function (){
+//
+//   $user = User::find(1);
+//
+//   foreach ($user->photos as $photo){
+//
+//
+//       return $photo->path;
+//   }
+//
+//});
+//
+//Route::get('post/{id}/photos', function ($id){
+//
+//    $post = Post::find($id);
+//
+//    foreach ($post->photos as $photo){
+//
+//
+//        echo $photo->path . "<br>";
+//    }
+//
+//});
 
-   $user = User::find(1);
 
-   foreach ($user->photos as $photo){
+Route::get('photo/{id}/post', function ($id) {
 
+    $photo = Photo::findOrFail($id);
 
-       return $photo->path;
-   }
-
-});
-
-Route::get('post/{id}/photos', function ($id){
-
-    $post = Post::find($id);
-
-    foreach ($post->photos as $photo){
-
-
-        echo $photo->path . "<br>";
-    }
+    return $photo->imageable;
 
 });
