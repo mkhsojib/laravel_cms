@@ -273,16 +273,31 @@ Route::get('/insert', function () {
 
 // many to many relationship
 
-Route::get('/user/{id}/role', function ($id){
-
-   $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
-
-   return $user;
-
-//   foreach ($user->roles as $role){
+//Route::get('/user/{id}/role', function ($id){
 //
+//   $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
 //
-//       return $role->name;
-//   }
+//   return $user;
+//
+////   foreach ($user->roles as $role){
+////
+////
+////       return $role->name;
+////   }
+//
+//});
+
+
+
+// Querying intermediate table
+
+Route::get('/user/pivot', function (){
+
+   $user = User::find(1);
+
+   foreach ($user->roles as $role){
+
+       return $role->pivot->created_at;
+   }
 
 });
