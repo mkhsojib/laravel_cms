@@ -1,4 +1,5 @@
 <?php
+use App\Country;
 use App\Post;
 use App\User;
 
@@ -288,16 +289,29 @@ Route::get('/insert', function () {
 //});
 
 
-
 // Querying intermediate table
 
-Route::get('/user/pivot', function (){
+Route::get('/user/pivot', function () {
 
-   $user = User::find(1);
+    $user = User::find(1);
 
-   foreach ($user->roles as $role){
+    foreach ($user->roles as $role) {
 
-       return $role->pivot->created_at;
-   }
+        return $role->pivot->created_at;
+    }
+
+
+});
+
+
+
+Route::get('/user/country', function (){
+
+$country = Country::find(3);
+
+foreach ($country->posts as $post){
+
+    return $post->title;
+}
 
 });
