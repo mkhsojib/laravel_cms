@@ -257,16 +257,32 @@ Route::get('/insert', function () {
 
 // One to many relationship
 
-Route::get('/posts', function () {
+//Route::get('/posts', function () {
+//
+//
+//    $user = User::find(1);
+//    foreach ($user->posts as $post) {
+//
+//        echo $post->title . '<br>';
+//
+//
+//    }
+//
+//});
 
 
+// many to many relationship
 
-    $user = User::find(1);
-    foreach ($user->posts as $post){
+Route::get('/user/{id}/role', function ($id){
 
-        echo $post->title . '<br>';
+   $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
 
+   return $user;
 
-    }
+//   foreach ($user->roles as $role){
+//
+//
+//       return $role->name;
+//   }
 
 });
