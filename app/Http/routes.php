@@ -2,6 +2,7 @@
 use App\Country;
 use App\Photo;
 use App\Post;
+use App\Tag;
 use App\User;
 
 /*
@@ -355,12 +356,24 @@ Route::get('/insert', function () {
 
 // Polymorphic relation many to many
 
-Route::get('post/tag', function () {
+//Route::get('post/tag', function () {
+//
+//    $post = Post::find(1);
+//
+//    foreach ($post->tags as $tag){
+//
+//        echo $tag->name;
+//    }
+//});
 
-    $post = Post::find(1);
 
-    foreach ($post->tags as $tag){
+Route::get('/tag/post', function (){
 
-        echo $tag->name;
+    $tag = Tag::find(2);
+
+    foreach ($tag->posts as $post){
+
+        echo $post->title;
     }
+
 });
