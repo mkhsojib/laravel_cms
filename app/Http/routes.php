@@ -48,11 +48,11 @@ Route::get('/', function () {
 
 */
 
-Route::get('/insert', function () {
-
-    DB::insert('insert into posts (title, content) values (?, ?)', ['laravel just wow', 'laravel yammy ']);
-
-});
+//Route::get('/insert', function () {
+//
+//    DB::insert('insert into posts (title, content) values (?, ?)', ['laravel just wow', 'laravel yammy ']);
+//
+//});
 
 
 //Route::get('/read', function (){
@@ -367,13 +367,23 @@ Route::get('/insert', function () {
 //});
 
 
-Route::get('/tag/post', function (){
+//Route::get('/tag/post', function (){
+//
+//    $tag = Tag::find(2);
+//
+//    foreach ($tag->posts as $post){
+//
+//        echo $post->title;
+//    }
+//
+//});
 
-    $tag = Tag::find(2);
 
-    foreach ($tag->posts as $post){
+/*
+|--------------------------------------------------------------------------
+| CRUD Application
+|--------------------------------------------------------------------------
 
-        echo $post->title;
-    }
+*/
 
-});
+Route::resource('/posts', 'PostsController');
