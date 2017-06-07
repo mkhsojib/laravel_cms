@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreatePostRequest;
+use App\Http\Requests\CreatePostRequestRequest;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -16,9 +18,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-      $posts = Post::all();
+        $posts = Post::all();
 
-       return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -37,13 +39,20 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request)
     {
+
+//        $this->validate($request, [
+//            'title' => 'required|max:3',
+//            'content' => 'required',
+//
+//        ]);
+
 //        return $request->all();
 
         Post::create($request->all());
 
-       return redirect('/posts');
+        return redirect('/posts');
 
 //        $input = $request->all();
 //
@@ -71,7 +80,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
-       return view('posts.show', compact('post'));
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -96,11 +105,11 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $post = Post::findOrFail($id);
+        $post = Post::findOrFail($id);
 
-       $post->update($request->all());
+        $post->update($request->all());
 
-       return redirect('posts');
+        return redirect('posts');
     }
 
     /**
