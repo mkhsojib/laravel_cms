@@ -16,10 +16,10 @@ use App\User;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//
-//});
+Route::get('/', function () {
+    return view('welcome');
+
+});
 
 
 //Route::get('/posts/{id}/{name}', function ($id,$name) {
