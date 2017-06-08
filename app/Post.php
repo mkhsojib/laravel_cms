@@ -40,4 +40,9 @@ class Post extends Model
     }
 
 
+    public static function scopeLatest($query)
+    {
+       return $query->orderBy('id', 'desc')->get();
+    }
+
 }
