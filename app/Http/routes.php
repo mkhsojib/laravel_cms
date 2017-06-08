@@ -4,6 +4,7 @@ use App\Photo;
 use App\Post;
 use App\Tag;
 use App\User;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -387,3 +388,22 @@ Route::get('/', function () {
 */
 Route::resource('/posts', 'PostsController');
 
+Route::get('/dates', function () {
+
+
+    $date = new DateTime('+ 1 week');
+
+    echo $date->format('d-m-y');
+
+    echo '<br>';
+
+    echo Carbon::now()->addDays(10)->diffForHumans();
+    echo '<br>';
+
+    echo Carbon::now()->subMonth(5)->diffForHumans();
+
+    echo '<br>';
+
+    echo Carbon::now()->yesterday()->diffForHumans();
+
+});
